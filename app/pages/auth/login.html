@@ -6,21 +6,18 @@
 </head>
 <body>
     <p>Log in</p>
-    <p><a href="">Not a member?</a></p>
+    <p><a href="signup.html">Not a member?</a></p>
 
     <form action="">
-        <input type="email" placeholder="Email" required>
+        <input class="email" type="email" placeholder="Email" required>
 
-        <input type="password" placeholder="Password" required>
+        <input placeholder="Password" required>
 
-        <p class="error">
-            Oops, looks like email or password is incorrect.
-            Please try again.
-        </p>
-
+        <p class="out"></p>
         <button>Log in</button>
-        <p><a href="">Forgot password?</a></p>
     </form>
-<script src="../../scripts/auth/validation.js"></script>
+
+    <p><a href="resetpass.html">Forgot password?</a></p>
+    <script src="../../scripts/validation/validation_email.js"></script>
 </body>
 </html>
