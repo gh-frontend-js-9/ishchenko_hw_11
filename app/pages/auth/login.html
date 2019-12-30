@@ -2,22 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
+    <link rel="stylesheet" href="../../assets/styles/css/style.css">
 </head>
 <body>
-    <p>Log in</p>
-    <p><a href="signup.html">Not a member?</a></p>
+<div class="wrapper">
+    <div class="flex-container">
+        <div class="box"></div>
+        <div>
+            <p class="heading">Log in</p>
+            <p><a class="link-hovered" href="signup.html">Not a member?</a></p>
 
-    <form action="">
-        <input class="email" type="email" placeholder="Email" required>
+            <form action="">
+                <input class="input email" type="email" placeholder="Email" required>
 
-        <input placeholder="Password" required>
+                <input class="input password" type="password" placeholder="Password" required>
 
-        <p class="out"></p>
-        <button>Log in</button>
-    </form>
+                <p class="out"></p>
+                <button class="button button-hovered" id="logIn">Log in</button>
+            </form>
 
-    <p><a href="resetpass.html">Forgot password?</a></p>
-    <script src="../../scripts/validation/validation_email.js"></script>
+            <p><a class="link-hovered" href="resetpass.html">Forgot password?</a></p>
+        </div>
+    </div>
+</div>
+
+    <script src="../../scripts/auth/login_user.js"></script>
+    <script src="../../scripts/validation/validation_login.js"></script>
 </body>
 </html>

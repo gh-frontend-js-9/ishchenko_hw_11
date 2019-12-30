@@ -2,24 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
+    <link rel="stylesheet" href="../../assets/styles/css/style.css">
 </head>
 <body>
-    <p>Reset password</p>
-    <p><a href="signup.html">Not a member?</a></p>
+<div class="wrapper">
+    <div class="flex-container">
+        <div class="box"></div>
+        <div>
+            <p class="heading">Reset password</p>
+            <p><a class="link-hovered" href="signup.html">Not a member?</a></p>
 
-    <form action="">
-        <input class="email" type="email" placeholder="Email" required>
+            <form action="">
+                <input class="input email" type="email" placeholder="Email" required>
 
-        <input class="password" type="password" placeholder="New password" required>
+                <input class="input password" type="password" placeholder="New password" required>
 
-        <input class="confirmPass" type="password" placeholder="Confirm password" required>
+                <input class="input confirmPass" type="password" placeholder="Confirm password" required>
 
-        <p class="out"></p>
-        <button>Reset</button>
-    </form>
-    <script src="../../scripts/validation/validation_email.js"></script>
-    <script src="../../scripts/validation/validation_password.js"></script>
-    <script src="../../scripts/validation/validation_confirm.js"></script>
+                <p class="out"></p>
+                <button class="button-hovered button" id="reset">Reset</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <script src="../../scripts/auth/resetpass.js"></script>
+    <script src="../../scripts/validation/validation_reset.js"></script>
 </body>
 </html>
