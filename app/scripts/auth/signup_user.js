@@ -1,4 +1,6 @@
-async function createUser() {
+async function createUser(e) {
+    e.preventDefault();
+
     let name = document.querySelector('.name').value;
     let email = document.querySelector('.email').value;
     let password = document.querySelector('.password').value;
@@ -8,14 +10,20 @@ async function createUser() {
         email: email,
         password: password
     }
-
-    await fetch('http://localhost:3000/api/users',{
+    let resp = await fetch('http://localhost:3000/api/users',{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
         },
         body: JSON.stringify(user)
     });
+
+    if(resp.status === 400){
+        alert('User already exists')
+    } else {
+        localStorage.clear();
+        alert('User created');
+    }
 }
 
 document.getElementById('signup').addEventListener('click', createUser);
